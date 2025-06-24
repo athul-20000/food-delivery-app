@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurants Near You</h1>
+    </header>
+    <div style="text-align:right; padding: 1rem;">
+    <a href="/cart" class="button">🛒 Cart (<span id="cartCount">0</span>)</a>
+</div>
+
+    <div class="container">
+        <ul>
+            {% for r in restaurants %}
+                <li>
+                    <h3><a href="/restaurant/{{ r['id'] }}/menu" class="button">{{ r['name'] }}</a></h3>
+                    <p>{{ r['location'] }}</p>
+                    <p>{{ r['description'] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+        <footer style="background-color: #c0392b; color: white; text-align: center; padding: 1rem; margin-top: 2rem;">
+        © 2025 Athul Suseelan. All rights reserved.
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Delivery App</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Food Delivery App 🍕</h1>
+        <div style="text-align: right; margin: 1rem;">
+            {% if session.get('user_id') %}
+                <span>👋 Hello, {{ session['username'] }}</span>
+                <a href="/logout" class="button">🚪 Logout</a>
+            {% else %}
+                <a href="/register" class="button">👤 Register</a>
+                <a href="/login" class="button">🔑 Login</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        <h2>Restaurants Near You</h2>
+        <a href="/restaurants" class="button">🍽 View Restaurants</a>
+    </main>
+    
+
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

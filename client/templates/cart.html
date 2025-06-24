@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<!-- Include login status in body -->
+<body data-logged-in="{{ 'true' if session.get('user_id') else 'false' }}">
+
+
+    <header>
+        <h1>🛒 Your Cart</h1>
+    </header>
+
+    <!-- 🔢 Cart Count in Header -->
+    <div style="text-align:right; padding: 1rem;">
+        <a href="/cart" class="button">🛒 Cart (<span id="cartCount">0</span>)</a>
+    </div>
+
+    <div class="container">
+        <ul id="cartList">
+            <!-- Cart items will be loaded by JavaScript -->
+        </ul>
+
+        <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+        <form id="checkoutForm" style="margin-top: 2rem;">
+            <div>
+                <label for="address">📍 Delivery Address:</label><br>
+                <textarea id="address" rows="3" required></textarea>
+            </div>
+            <div>
+                <label for="phone">📞 Phone Number:</label><br>
+                <input type="tel" id="phone" required>
+            </div>
+            <div>
+                <label for="payment">💳 Payment Method:</label><br>
+                <select id="payment" required>
+                    <option value="">-- Select --</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                </select>
+            </div>
+            <br>
+            <button id="placeOrderBtn" class="button" type="button">✅ Place Order</button>
+
+        </form>
+
+        <a href="/restaurants" class="button">⬅ Continue Shopping</a>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
+
+
+
+
