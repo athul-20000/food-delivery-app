@@ -48,7 +48,7 @@ cd food-delivery-app
 
 
 cd food-delivery-app
-2. **Install dependencies**
+1. **Install dependencies**  
 
 pip install -r requirements.txt
 
