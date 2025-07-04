@@ -1,99 +1,112 @@
-# 🍕 Food Delivery App
+# 🍔 Food Delivery Web App
 
-A responsive and lightweight food ordering platform where users can browse restaurants, view menus, add items to cart, and place orders with delivery and payment details.
+This is a simple and interactive food delivery web application built using **Flask**, **SQLite**, **HTML/CSS**, and **JavaScript**. It supports restaurant listings, menus, cart functionality, and user login/registration.
 
----
-
-## 📍 Repository
-
-GitHub Link: [https://github.com/athul-20000/food-delivery-app](https://github.com/athul-20000/food-delivery-app)
+> 🔗 GitHub Repo: [https://github.com/athul-20000/food-delivery-app](https://github.com/athul-20000/food-delivery-app)
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 🔐 User registration and login
-- 🛍️ Add-to-cart system (localStorage based)
-- 📋 Cart management and item removal
-- 🧾 Checkout with address, phone, and payment method
-- 🚫 Login check before placing order
-- 📦 Order confirmation with alert
-- 💻 Responsive frontend with image backgrounds
-- ⚙️ SQLite database with Flask backend
+- 👨‍🍳 Browse restaurants and their menus
+- 🛒 Add items to cart (using localStorage)
+- 📦 Place orders with address and payment selection
+- 🔐 User registration & login
+- 💽 SQLite backend for persistent data
+- 🎨 Responsive UI with dynamic updates
 
 ---
 
-## 🛠️ Technologies Used
+## 🧱 Project Structure
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Flask (Python)
-- **Database:** SQLite
-- **Auth:** Flask session management
-- **Deployment Platform:** Render (planned), GitHub
+food-delivery-app/
+├── client/
+│ ├── templates/ # HTML templates (Jinja2)
+│ └── static/ # CSS, JS, images
+├── server/
+│ ├── app.py # Flask backend
+│ ├── seed_restaurants.py
+│ └── seed_menu_items.py
+├── foodapp.db # SQLite database
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
 
----
 
-## 🚀 How to Run Locally
 
-### 1. Clone the Repository
+## 💻 Running the App Locally
 
+### 🔧 Requirements
+- Python 3.x installed
+- Flask installed
+
+### 📥 Steps
+
+1. **Clone the repository**  
 ```bash
 git clone https://github.com/athul-20000/food-delivery-app.git
 cd food-delivery-app
-2. Set Up Virtual Environment
-bash
-CopyEdit
-python -m venv venv
-source venv/bin/activate     # On Windows: venv\Scripts\activate
-3. Install Dependencies
-bash
-CopyEdit
+
+### 🔧 Requirements
+- Python 3.x installed
+- Flask installed
+
+### 📥 Steps
+
+1. **Clone the repository**  
+```bash
+git clone https://github.com/athul-20000/food-delivery-app.git
+cd food-delivery-app
+Install dependencies
+
 pip install -r requirements.txt
-4. Set Up Database (if schema file exists)
-bash
-CopyEdit
-sqlite3 foodapp.db < schema.sql
-Or manually create a foodapp.db with tables: users, restaurants, and menu_items.
-5. Run the App
-bash
-CopyEdit
-cd server
-python app.py
-App runs at: http://localhost:5000
-________________________________________
-🌍 Deployment Steps (Render)
-Deployment will make the site accessible publicly worldwide 
-1.	Push your code to GitHub 
-2.	Create a Render account
-3.	Click New → Web Service
-4.	Connect your GitHub repo
-5.	Configure:
-o	Build Command:
-nginx
-CopyEdit
-pip install -r requirements.txt
-o	Start Command:
-nginx
-CopyEdit
-python app.py
-6.	Deploy!
-7.	Copy the public URL and share it.
-________________________________________
-📸 Screenshots
-Homepage	Menu Page	Cart Page
-		
-(Replace with actual images or remove this section)
-________________________________________
-🧪 For Users Opening the Project
-If you're trying to run this project locally:
-1.	Ensure you have Python 3.x installed
-2.	Follow the above setup steps
-3.	Navigate to http://localhost:5000 in your browser
-4.	Register a user, explore restaurants, and place orders! 🎉
-________________________________________
-📝 License
-This project is built as part of an academic exercise.
-Feel free to explore and modify for learning purposes.
-________________________________________
+
+Run the Flask app
+
+python server/app.py
+
+Open browser and go to:
+
+http://127.0.0.1:5000
+
+🌐 Try on Replit (Free Hosting)
+You can also run the app using Replit without deploying permanently.
+
+✅ Steps to Run on Replit:
+Create a new Flask Repl at replit.com
+
+Upload your project files:
+
+app.py, templates/, static/, and foodapp.db
+
+Install Flask in the Replit shell:
+
+pip install flask
+
+Set your .replit file to:
+
+run = "python3 app.py"
+Click "Run" button
+Access your app from the temporary URL Replit provides
+
+⚠️ Replit free URLs expire after ~15 minutes of inactivity
+
+⚠️ Known Limitations
+No permanent database (uses local SQLite)
+
+Cart is stored in localStorage (not synced to user account)
+
+Temporary hosting only (unless deployed on a platform like Render/Fly.io)
+
+
+
+🧑‍💻 Author
+Athul Suseelan, 2025
+College of Engineering Trivandrum
+athulsuseelan3@gmail.com
+
+📜 License
+This project is open-source and free to use for learning and demonstration purposes.
+
+© Athul Suseelan 2025
 
 
