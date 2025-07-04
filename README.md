@@ -51,7 +51,7 @@ cd food-delivery-app
 - Python 3.x installed
 - Flask installed
 
-### 📥  steps
+### 📥 Steps
 
 1. **Clone the repository**  
 ```bash
