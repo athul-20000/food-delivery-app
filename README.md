@@ -46,7 +46,8 @@ food-delivery-app/
 git clone https://github.com/athul-20000/food-delivery-app.git
 cd food-delivery-app
 
-### 🔧 Requirements
+### 🔧  Requirements
+
 - Python 3.x installed
 - Flask installed
 
